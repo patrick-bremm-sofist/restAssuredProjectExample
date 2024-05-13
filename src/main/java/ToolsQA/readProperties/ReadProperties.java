@@ -18,7 +18,7 @@ public class ReadProperties {
             appProps.load(new FileInputStream(configPath));
             return appProps.getProperty(key);
         } catch (Exception e) {
-            throw new Exception("Error read api.properties");
+            throw new Exception("Error read properties");
         }
     }
 }
