@@ -12,6 +12,8 @@ import static org.hamcrest.Matchers.*;
 import static io.restassured.RestAssured.*;
 
 public class LoginTest extends BaseTest {
+    // API Utilizada
+    // https://automationexercise.com/api_list
         
     @Test
     @DisplayName("Verify login with invalid user")
