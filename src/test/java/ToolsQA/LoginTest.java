@@ -1,12 +1,9 @@
 package ToolsQA;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
@@ -25,7 +22,6 @@ public class LoginTest {
     @Test
     @DisplayName("Verify login with invalid user")
     public void testVerifyLoginWithValidDetails() throws InterruptedException {
-        // TimeUnit.MINUTES.sleep(1); // Avoid http error 429
         Response response = given()
             .contentType("multipart/form-data")
             .multiPart("email", "email")

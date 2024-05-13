@@ -26,7 +26,6 @@ public class EmployeesTest {
     @Test
     @DisplayName("List all products")
     public void testListAllProducts() throws InterruptedException {
-        // TimeUnit.MINUTES.sleep(1); // Avoid http error 429
         Response response = given()
             .header("Content-Type", "application/json")
             .when()
