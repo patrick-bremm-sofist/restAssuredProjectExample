@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
@@ -27,7 +28,7 @@ public class EmployeesTest {
     @DisplayName("List all products")
     public void testListAllProducts() throws InterruptedException {
         Response response = given()
-            .header("Content-Type", "application/json")
+            .contentType(ContentType.JSON)
             .when()
                 .get("productsList")
             .then()
