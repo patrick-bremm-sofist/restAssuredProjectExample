@@ -3,7 +3,7 @@ package ToolsQA.readProperties;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ReadProperties {
+public class ReadProperties implements IReadProperties {
     private String fileName;
 
     ReadProperties(String fileName) {
